@@ -1,0 +1,11 @@
+<div class="col-lg-4 col-lg-push-4 padding" ng-controller="loginCtrl as login">
+    <div class="card">
+        <div class="h2 login-title">Login</div>
+        <hr>
+        <input type="text" placeholder="Username" ng-model="username"><hr>
+        <input type="password" placeholder="Password" ng-model="password">
+        <div class="error-msg" ng-class="{'animated bounce' : loginerror}" ng-show="loginerror"><i class="fa fa-times-circle"></i> Login Failed</div>
+        <hr>
+        <input  class="btn-submit" type="submit" value="Submit" ng-click="login()">
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div ng-controller="panelCtrl">
+<div class="col-lg-6 col-lg-push-3 padding">
+    <div class="card ">
+        <label class="h1 course-title">Your Courses</label>
+        <div class="courses" ng-repeat="course in courses" ng-click="setCourseId($index)">
+            <hr>
+            <i class="fa fa-book"></i>
+            {{course.title}}
+            <div class="delete"><i class="fa fa-minus-circle" ng-click="deleteCourse($index)"></i></div>
+        </div>
+    </div>
+</div>
+
+    <button class="fab" ng-click="showModal=true"><i class="fa fa-plus"></i></button>
+
+
+
+<div class="mymodal mymodal-content" ng-show="showModal">
+    <div class="col-lg-4 col-lg-push-4">
+        <div class="card modal-card">
+            <div class="close-modal h1" ng-click="showModal=false">&times;</div>
+            <div class="course-title h1">Add New Tutorial</div>
+            <hr>
+            <input type="text" placeholder="Course Name" ng-model="name">
+            <button class="btn-outline" ng-click="addTutorial()"><i class="fa fa-check-circle"></i> Submit</button>
+        </div>
+    </div>
+</div>
+
+</div>

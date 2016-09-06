@@ -1,0 +1,82 @@
+<div class="chapter-view" ng-controller="chapterCtrl">
+    <div class="col-lg-10 col-lg-push-1">
+        <div class="card">
+            <div class="chapHeader h2"><i class="fa fa-book"></i> {{courseTitle}}
+                <a class="logout" href="#login"><i class="fa fa-sign-out"></i></a>
+                <a class="backbtn" href="#panel"><i class="fa fa-arrow-left"></i> Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-lg-push-1">
+        <div class="card">
+            <div class="h1 indexTitle">Index <i class="fa fa-plus-square addchapter" ng-click="showModal=true"></i>
+            </div>
+            <div ng-repeat="chapter in chapters">
+                <hr>
+                <div class="chapterName" ng-click="setCid($index)"><i class="fa fa-chevron-circle-right"></i>
+                    {{chapter.ChapterName}}
+                    <div class="delete"><i class="fa fa-minus-circle" ng-click="deleteChapter($index)"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-7 col-lg-push-1">
+        <div class="card" ng-show="showCards()">
+            <div class="chapTitle h2">
+                <div ng-show="isViewEnabled">{{chapters[cid].ChapterName}}</div>
+                <div ng-hide="isViewEnabled">
+                    <input type="text" placeholder="{{chapters[cid].ChapterName}}" ng-model="chapters[cid].ChapterName">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-7 col-lg-push-1">
+        <button class="editfab" ng-show="showCards()"><i class="fa {{isViewEnabled ? 'fa-pencil' : 'fa-floppy-o'}}"
+                                   ng-click="toggleEditView()"></i></button>
+        <div class="card" ng-show="showCards()">
+            <div class="chapDesc h4" ng-show="isViewEnabled">{{chapters[cid].Description}}</div>
+
+            <div class="chapDesc h4" ng-hide="isViewEnabled">
+                <textarea id="textarea" ng-model="chapters[cid].Description">{{chapters[cid].Description}}</textarea>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-10 col-lg-push-1">
+        <div class="card" ng-show="showCards()">
+            <div class="link" ng-show="isViewEnabled"><i class="fa {{fileicon[chapters[cid].FileType]}}"></i> <a
+                    href="{{chapters[cid].FileContent}}"
+                    target="_new">{{chapters[cid].FileContent}}</a>
+            </div>
+
+            <div style="display: flex" ng-hide="isViewEnabled">
+                <input type="text" placeholder="URL" ng-model="chapters[cid].FileContent"/> &nbsp;
+                <select name="" id="" ng-model="chapters[cid].FileType">
+                    <option disabled selected>Type</option>
+                    <option value="0">Youtube</option>
+                    <option value="1">PDF</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mymodal mymodal-content" ng-show="showModal">
+        <div class="col-lg-4 col-lg-push-4">
+            <div class="card modal-card">
+                <div class="close-modal h1" ng-click="showModal=false">&times;</div>
+                <div class="course-title h1">Add New Chapter</div>
+                <hr>
+                <input type="text" placeholder="Chapter Name" ng-model="name">
+                <button class="btn-outline" ng-click="addChapter()"><i class="fa fa-check-circle"></i> Submit</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

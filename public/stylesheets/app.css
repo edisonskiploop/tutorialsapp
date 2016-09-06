@@ -1,0 +1,321 @@
+::selection {
+    background-color: #FF6100;
+    color: #fff;
+}
+
+::-moz-selection {
+    background-color: #FF6100;
+    color: #fff;
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
+button:focus {
+    outline: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+div {
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.card {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08),
+    0 3px 1px -2px rgba(0, 0, 0, .2);
+    padding: 15px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+    line-height: 10vh;
+    vertical-align: middle;
+    background: #2a7bc8;
+    color: #fff;
+    font-family: 'Lobster', cursive;
+}
+
+.padding {
+    padding: 2%;
+}
+
+.login-title {
+    padding: 10px;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    background: #2a7bc8;
+    color: #fff;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px;
+    color: #a8abae;
+    border-radius: 5px;
+    border: 2px solid #eee;
+    font-family: 'Crete Round', serif;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #a89f9f;
+}
+
+.btn-submit {
+    border: none;
+    color: #fff;
+    background: #2785de;
+    box-shadow: inset 0px -15px 0.6em #296baa;
+    font-family: 'Crete Round', serif;
+}
+
+.course-title {
+    color: #8a8a8a;
+    font-family: 'Rasa', serif;
+}
+
+.courses {
+    font-size: 20px;
+    color: #b9b5b5;
+    cursor: pointer;
+}
+
+.delete {
+    float: right;
+}
+
+.fa-minus-circle {
+    color: #cbc5c5;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.fa-minus-circle:hover {
+    color: red;
+}
+
+.fa-book {
+    color: #5aacf9;
+}
+
+.fab {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    color: #fff;
+    font-size: 50px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f76405;
+    font-size: 25px;
+    box-shadow: 0px 0px 0.3em #555;
+}
+
+.mymodal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+
+.mymodal-content {
+    padding-top: 20vh;
+    vertical-align: middle;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #5aacf9;
+    border: 1px solid #5aacf9;
+    font-family: 'Crete Round', serif;
+    margin-top: 25px;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-outline:hover {
+    background: #5aacf9;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.modal-card {
+    border-radius: 5px;
+}
+
+.close-modal {
+    float: right;
+    color: #e6dddd;
+    cursor: pointer;
+}
+
+.chapter-view {
+    padding: 15px;
+}
+
+.chapHeader {
+    color: #2a7bc8;
+    font-family: 'Vidaloka', serif;
+}
+
+.chapTitle {
+    text-align: center;
+    color: #827d7d;
+}
+
+.indexTitle {
+    color: #827d7d;
+}
+
+.chapDesc {
+    color: #6b6b6b;
+    line-height: 30px;
+}
+
+.link {
+    text-align: right;
+}
+
+.link:hover {
+    color: blue;
+}
+
+.fa-youtube-square {
+    color:red;
+    font-size: x-large;
+}
+
+.fa-pdf-o {
+    color: red;
+}
+
+.editfab {
+    right: 50px;
+    top: -30px;
+    border: none;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: orange;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0.3em #555;
+    color: #fff;
+    font-size: x-large;
+}
+
+.editfab:hover {
+    box-shadow: 0px 0px 0.6em #555;
+}
+
+textarea {
+    width: 100%;
+    height: 238px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid #eee;
+}
+
+select {
+    border-radius: 5px;
+    border: 2px solid #eee;
+}
+
+.backbtn {
+    float: right;
+    height: 100%;
+    color: #2a7bc8 !important;
+    border: 1px solid #2a7bc8;
+    background: #fff;
+    font-size: large;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.backbtn:hover {
+    background: #2a7bc8;
+    color: #fff !important;
+}
+
+.logout {
+    float: right;
+    color: #cf3c3c !important;
+    margin-left: 5px;
+}
+
+.chapterName {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.chapterName:hover {
+    border-radius: 5px;
+    background: #eee;
+}
+
+.error-msg {
+    color: #f00;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.addchapter {
+    float:right;
+    color: #c1c1b4;
+    cursor: pointer;
+}
+
+.addchapter:hover {
+    color:#9c9c93;
+}
+
+.fa-file-pdf-o {
+    color : red;
+}
